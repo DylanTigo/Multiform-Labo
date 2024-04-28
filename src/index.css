@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  body{
+    @apply text-gray-900
+  }
+  form{
+    @apply text-[15px] mt-8 space-y-6
+  }
+  label, .label{
+    @apply font-semibold mb-[6px] flex items-center min-w-32
+  }
+  input[type="radio"]{
+    @apply mr-1 size-4 font-normal
+  }
+  svg{
+    @apply size-4 translate-x-0 transition-transform
+  }
+  ::placeholder{
+    @apply text-sm
+  }
+}
+
+@layer components{
+  .formTitle{
+    @apply text-xl font-bold flex gap-2
+  }
+  .formTitle svg{
+    @apply size-7 bg-blue-100 p-1 rounded-lg text-blue-700
+  }
+}
+
+@layer utilities {
+  .input{
+    @apply bg-gray-100 border border-gray-300 py-[6px] px-3 appearance-none outline-offset-1 outline-blue-500 rounded-lg
+  }
+  .description{
+    @apply text-[12px] flex gap-1 items-center 
+  }
+  .btn {
+    @apply flex justify-center items-center gap-2 mt-1 font-medium py-2 px-4 rounded-lg transition-transform
+  }
+  .toRight{
+    @apply bg-blue-500 text-white
+  }
+  .toleft{
+    @apply border border-blue-500
+  }
+  .label{
+    @apply mb-[6px]
+  }
+  .progressBtn{
+    @apply size-10 text-sm flex justify-center items-center bg-white text-blue-300 border-2 border-blue-300 rounded-full
+  }
+  .progressBtn.check{
+    @apply text-slate-300 border-2 border-blue-500 bg-blue-500
+  }
+}
