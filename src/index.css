@@ -57,4 +57,16 @@
   .progressBtn.check{
     @apply text-slate-300 border-2 border-blue-500 bg-blue-500
   }
+  .modalRadio{
+    @apply justify-center
+  }
+  .modalRadio .label{
+    @apply justify-center
+  }
+  .modalRadio div:nth-child(2){
+    @apply justify-center gap-16
+  }
+  .modalRadio div:nth-child(2)  label{
+    @apply min-w-0
+  }
 }

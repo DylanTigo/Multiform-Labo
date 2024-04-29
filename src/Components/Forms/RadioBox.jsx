@@ -2,14 +2,14 @@
 import { Info } from "lucide-react";
 import { useState } from "react";
 
-export default function RadioBox({ label, choisesList, description}) {
+export default function RadioBox({ className, label, choisesList, description}) {
   const [choise, setChoise] = useState(choisesList[0]);
 
   const handleChoiseChange = (event) => {
     setChoise(event.target.value);
   };
   return (
-    <div>
+    <div className={className}>
       <div className="label">{label}</div>
       <div className="flex gap-3">
         {choisesList.map((elt, index) => (

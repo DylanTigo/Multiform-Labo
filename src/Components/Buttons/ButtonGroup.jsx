@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function ButtonGroup() {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 mt-auto">
       <button type="submit" className="btn min-w-40 group toleft">
         <ArrowLeft className="group-hover:-translate-x-1" /> Previous Step 
       </button>
