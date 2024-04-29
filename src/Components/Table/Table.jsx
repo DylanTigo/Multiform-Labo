@@ -9,7 +9,7 @@ export default function Table() {
 
   return (
     <>
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-end mb-4 mt-8">
         <button onClick={() => addRow(elementList, setElementList)} className="flex gap-1 items-center rounded-lg py-1 ps-1 pe-2 hover:bg-blue-100 text-sm">
           <Plus /> Add
         </button>

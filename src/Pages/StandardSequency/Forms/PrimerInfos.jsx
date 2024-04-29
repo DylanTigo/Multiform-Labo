@@ -1,36 +1,20 @@
-import { Minus, Plus, TestTube } from "lucide-react";
+import { Flashlight } from "lucide-react";
 import FormTitle from "../../../Components/Forms/FormTitle";
 import { useState } from "react";
-import { addRow, removeRow } from "../../../utils/addRemoveRow";
 import TableRow from "../../../Components/Table/TableRow";
 import ButtonGroup from "../../../Components/Buttons/ButtonGroup";
 
-export default function SampleInfos() {
-  const [sampleList, setSampleList] = useState([
-    { id: 0, data: ["", "", "", "", "", "", ""] },
+export default function PrimerInfos() {
+  const [primerList, setPrimerList] = useState([
+    { id: 0, data: ["1_F", "", "", "1.5", "Y", "N"] },
   ]);
-
   return (
     <>
       <FormTitle>
-        <TestTube />
-        Sample Informations
+        <Flashlight />
+        Primer Informations
       </FormTitle>
-      <div className="flex justify-end mb-4 mt-8">
-        <button
-          onClick={() => addRow(sampleList, setSampleList)}
-          className="flex gap-1 items-center rounded-lg py-1 ps-1 pe-2 hover:bg-blue-100 text-sm"
-        >
-          <Plus /> Add
-        </button>
-        <button
-          onClick={() => removeRow(sampleList, setSampleList)}
-          className="flex gap-1 items-center rounded-lg py-1 ps-1 pe-2 hover:bg-blue-100 text-sm"
-        >
-          <Minus /> Remove
-        </button>
-      </div>
-      <table className="border-collapse w-full  border border-gray-400 bg-white text-sm shadow-sm">
+      <table className="border-collapse w-full  border border-gray-400 bg-white text-sm shadow-sm mt-8">
         <thead className="bg-gray-50">
           <tr>
             <th className=" border border-gray-300 font-semibold p-3 text-center">
@@ -60,7 +44,7 @@ export default function SampleInfos() {
           </tr>
         </thead>
         <tbody>
-          {sampleList.map((element) => (
+          {primerList.map((element) => (
             <TableRow key={element.id} element={element} />
           ))}
         </tbody>

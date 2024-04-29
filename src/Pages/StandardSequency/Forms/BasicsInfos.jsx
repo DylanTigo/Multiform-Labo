@@ -2,15 +2,17 @@ import { ArrowRight, Info } from "lucide-react";
 import Checkbox from "../../../Components/Forms/Checkbox";
 import RadioBox from "../../../Components/Forms/RadioBox";
 import FormTitle from "../../../Components/Forms/FormTitle";
+import { useStepper } from "../../../Context/StepperContect";
 
 export default function BasicsInfos() {
+  const {handleNext} = useStepper()
   return (
     <>
       <FormTitle>
         <Info />
         Basics Informations
       </FormTitle>
-      <form action="">
+      <form action="" onSubmit={handleNext}>
         <div className="inputContainer">
           <label>Sample Type</label>
           <Checkbox choisesList={["PCR product", "Plasmid", "Premix"]} />
