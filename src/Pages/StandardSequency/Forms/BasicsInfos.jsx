@@ -30,7 +30,7 @@ export default function BasicsInfos() {
           choisesList={["Tube", " 96- well plate"]}
         />
         <RadioBox label={"Run Type"} choisesList={["Regular", "Express"]} />
-        <button type="submit" className="btn group toRight">
+        <button type="submit" className="btn mx-auto group toRight">
           Next Step <ArrowRight className="group-hover:translate-x-1" />
         </button>
       </form>
